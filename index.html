@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>邵炜杰的自我介绍</title>
+  <style>
+    body {
+      font-family: "Poppins", "Noto Sans SC", sans-serif;
+      background-color: #e0f7fa;
+      margin: 0;
+      padding: 0;
+      color: #004d40;
+    }
+    header {
+      background-color: #4dd0e1;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      font-size: 2em;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      background-color: #b2ebf2;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #00796b;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .lang-selector {
+      text-align: center;
+      margin: 10px auto;
+    }
+    section, footer {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .avatar {
+      display: block;
+      margin: 0 auto 20px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #00796b;
+    }
+    .contacts a {
+      display: inline-block;
+      margin: 0 10px;
+      color: #004d40;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header id="title">邵炜杰的自我介绍</header>
+
+  <nav>
+    <a href="./index.html">首页</a>
+    <a href="./skills.html">技能</a>
+    <a href="./hobbies.html">兴趣</a>
+    <a href="./contact.html">联系</a>
+  </nav>
+
+  <div class="lang-selector">
+    <label for="languageSelect">🌐 选择语言:</label>
+    <select id="languageSelect" onchange="switchLanguage()">
+      <option value="zh">中文</option>
+      <option value="ja">日本語</option>
+      <option value="en">English</option>
+      <option value="ko">한국어</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+      <option value="ru">Русский</option>
+      <option value="es">Español</option>
+      <option value="ar">العربية</option>
+      <option value="pt">Português</option>
+    </select>
+  </div>
+
+  <img src="avatar.jpg" alt="头像" class="avatar">
+
+  <section id="about"></section>
+
+  <footer>
+    <div class="contacts">
+      📧 <a href="mailto:bryantshao22@gmail.com">Email</a>
+      🐙 <a href="https://github.com/BryantShao22" target="_blank">GitHub</a>
+      🎨 <a href="https://www.pixiv.net/users/116673125" target="_blank">Pixiv</a>
+      📺 <a href="https://space.bilibili.com/670832460" target="_blank">Bilibili</a>
+      🐦 <a href="https://twitter.com/bryantS_22" target="_blank">Twitter</a>
+      ▶️ <a href="https://www.youtube.com/@Bryantshao-o8f" target="_blank">YouTube</a>
+    </div>
+    <p>© 2025 邵炜杰 | 清爽上线，只想搞事业 💻</p>
+  </footer>
+
+  <script>
+    const data = {
+      zh: {
+        title: "邵炜杰的自我介绍",
+        about: "大家好，我是邵炜杰，目前单身，现在只想搞事业。"
+      },
+      ja: {
+        title: "邵炜杰の自己紹介",
+        about: "こんにちは、邵炜杰です。現在独身、今はキャリアに集中しています。"
+      },
+      en: {
+        title: "Bryant Shao's Introduction",
+        about: "Hi, I'm Bryant Shao. Currently single and focused on my career."
+      }
+    };
+
+    function switchLanguage() {
+      const lang = document.getElementById('languageSelect').value;
+      if (!data[lang]) return;
+      document.getElementById('title').textContent = data[lang].title;
+      document.getElementById('about').textContent = data[lang].about;
+    }
+
+    switchLanguage();
+  </script>
+</body>
+</html>
