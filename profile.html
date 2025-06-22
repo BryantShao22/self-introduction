@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>联系我 - 邵炜杰</title>
+    <title>关于我 - 邵炜杰</title>
     <style>
         body {
             font-family: "Poppins", "Noto Sans SC", sans-serif;
@@ -21,8 +21,8 @@
         }
         nav {
             background-color: #b2ebf2;
-            text-align: center;
             padding: 10px;
+            text-align: center;
         }
         nav a {
             margin: 0 15px;
@@ -39,24 +39,26 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             text-align: center;
         }
-        .contact-links a {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 15px;
-            background-color: #4dd0e1;
-            color: white;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
+        .profile-pic {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
         }
-        .contact-links a:hover {
-            background-color: #00bcd4;
+        .info-block {
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .info-block p {
+            margin: 10px 0;
+            font-size: 1.1em;
         }
     </style>
 </head>
 <body>
-<header id="contact-title">联系我</header>
+<header id="about-title">关于我</header>
 <nav>
     <a href="welcome.html" id="nav-home">首页</a>
     <a href="profile.html" id="nav-profile">关于我</a>
@@ -64,15 +66,11 @@
     <a href="hobbies.html" id="nav-hobbies">兴趣</a>
     <a href="contact.html" id="nav-contact">联系</a>
 </nav>
+
 <div class="container">
-    <p>你可以通过以下方式找到我：</p>
-    <div class="contact-links">
-        <a href="mailto:bryantshao22@gmail.com">📧 邮箱</a>
-        <a href="https://github.com/BryantShao22" target="_blank">🐙 GitHub</a>
-        <a href="https://www.pixiv.net/users/116673125" target="_blank">🎨 Pixiv</a>
-        <a href="https://space.bilibili.com/670832460" target="_blank">📺 Bilibili</a>
-        <a href="https://twitter.com/bryantS_22" target="_blank">🐦 Twitter</a>
-        <a href="https://www.youtube.com/@Bryantshao-o8f" target="_blank">▶️ YouTube</a>
+    <img src="证件大头照.jpg" alt="大头照" class="profile-pic">
+    <div class="info-block" id="about-content">
+        <!-- 文本内容由 lang.js 注入 -->
     </div>
 </div>
 

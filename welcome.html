@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome - 邵炜杰</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #b2ebf2, #e0f7fa);
+            font-family: "Poppins", "Noto Sans SC", sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #004d40;
+        }
+        .welcome-text {
+            font-size: 2.5em;
+            font-weight: bold;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        .lang-selector {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+        }
+        nav {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #00796b;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="welcome.html" id="nav-home">首页</a>
+    <a href="profile.html" id="nav-profile">关于我</a>
+    <a href="skills.html" id="nav-skills">技能</a>
+    <a href="hobbies.html" id="nav-hobbies">兴趣</a>
+    <a href="contact.html" id="nav-contact">联系</a>
+</nav>
+
+<div class="lang-selector">
+    <select id="languageSelect" onchange="setLang(this.value)">
+        <option value="zh">中文</option>
+        <option value="en">English</option>
+        <option value="ja">日本語</option>
+    </select>
+</div>
+
+<div class="welcome-text" id="welcome-text">欢迎来到邵炜杰的主页！</div>
+
+<script src="lang.js"></script>
+</body>
+</html>
